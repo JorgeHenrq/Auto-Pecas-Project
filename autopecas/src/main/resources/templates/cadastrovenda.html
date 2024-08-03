@@ -14,19 +14,20 @@
             <p><div class="col-sm-3 mx-auto text-center"> 
                 Cliente ainda não possui cadastro ? <a th:href="@{/cadastrocliente}"><button type="button"> Cadastro de Clientes</button></a><p>
                     Peça ainda não possui cadastro ? <a th:href="@{/cadastropeca}"><button type="button"> Cadastro de Peças</button></a><p>  
-                <form th:action="@{/cadastrovenda}" th:object="${venda}" method="post"> 
+                <form th:action="@{/gravar-venda}" th:object="${venda}" method="post"> 
                     <p>Discrição do Item: <input type="text" th:field="${venda.discricaoVenda}" required/> </p> 
                     <p>CPF do cliente: <input type="text" th:field="${venda.cpfCliente}" required/></p>
                     <p>Quantidade: <input type="text" th:field="${venda.quantidade}" required/></p>
                     <p>Valor: <input type="text" th:field="${venda.valorVenda}" required/></p>
                     <p>Data da Venda: <input type="text" th:field="${venda.dataVenda}" required/></p>
                      <p><input type="submit" value="Cadastrar" /></p> 
-                </form>  
-            </div> 
+                </form>
+                </div>
         </div><p> 
         <nav>
+            <a th:href="@{/listaVenda}"><button type="button"> Lista de Vendas </button></a><p></p>
             <a th:href="@{/}"><button type="button"> << Tela Inicial </button></a><p>
         </nav>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
+        </body>
 </html>
